@@ -1,0 +1,7 @@
+{
+    "jdk.advanced.disable.nbjavac": false,
+    "java.project.referencedLibraries": [
+        "/Users/shimamurayuudai/Documents/gakko/pro_ouyou/junit-4.13.2.jar",
+        "/Users/shimamurayuudai/Documents/gakko/pro_ouyou/hamcrest-core-1.3.jar"
+    ]
+}
