@@ -57,5 +57,40 @@ Exception in thread "main" java.lang.AssertionError: 残高不足です
 ```
 しっかりと確認できている。
 
-## test4
+## test20
 coberutaを使って、テストカバレッジを計測してみる
+なかなか、カバレッジがうまくいかない
+→バージョンを落としても、7にはできない
+そこで、jacocoを使ってみる
+```
+$ chmod +x run_jacoco_clean.sh
+./run_jacoco_clean.sh
+Javaファイルを確認中...
+-rw-r--r--  1   staff   365  4 15 03:19 src/Account.java
+-rw-r--r--  1   staff  1373  4 15 11:18 src/AccountTest.java
+Java 8でコンパイル中...
+警告: [options] ブートストラップ・クラス・パスが-source 8と一緒に設定されていません
+  ブートストラップ・クラス・パスを設定しないと、クラス・ファイルがJDK 8で実行できない場合があります
+    ブートストラップ・クラス・パスを自動的に設定するため、-source 8 -target 1.8のかわりに--release 8をお薦めします
+警告: [options] ソース値8は廃止されていて、今後のリリースで削除される予定です
+警告: [options] ターゲット値8は廃止されていて、今後のリリースで削除される予定です
+警告: [options] 廃止されたオプションについての警告を表示しないようにするには、-Xlint:オプションを使用します。
+警告4個
+コンパイルされたクラスファイル:
+total 16
+drwxr-xr-x   4   staff   128  4 15 11:28 .
+drwxr-xr-x  11   staff   352  4 15 11:28 ..
+-rw-r--r--   1   staff   408  4 15 11:28 Account.class
+-rw-r--r--   1   staff  1527  4 15 11:28 AccountTest.class
+テスト実行中...
+JUnit version 4.13.2
+.....
+Time: 0.013
+
+OK (5 tests)
+
+レポート生成中...
+[INFO] Loading execution data file pro_ouyou/test20/jacoco.exec.
+[INFO] Analyzing 1 classes.
+Coverage report generated in report directory
+```
